@@ -1,0 +1,10 @@
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\bin\Debug\WinForms.exe.config
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\bin\Debug\WinForms.exe
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\bin\Debug\WinForms.pdb
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.csprojAssemblyReference.cache
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.MainForm.resources
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.Properties.Resources.resources
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.csproj.GenerateResource.cache
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.csproj.CoreCompileInputs.cache
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.exe
+C:\Users\grimy\Downloads\Intensiv-master (2)\Intensiv-master\src\winforms.prj\obj\Debug\WinForms.pdb

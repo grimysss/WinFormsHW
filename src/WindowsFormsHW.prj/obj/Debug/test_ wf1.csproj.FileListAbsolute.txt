@@ -1,0 +1,10 @@
+C:\Users\grimy\source\repos\test_ wf1\bin\Debug\test_ wf1.exe.config
+C:\Users\grimy\source\repos\test_ wf1\bin\Debug\test_ wf1.exe
+C:\Users\grimy\source\repos\test_ wf1\bin\Debug\test_ wf1.pdb
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test_ wf1.csprojAssemblyReference.cache
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test__wf1.Form1.resources
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test__wf1.Properties.Resources.resources
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test_ wf1.csproj.GenerateResource.cache
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test_ wf1.csproj.CoreCompileInputs.cache
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test_ wf1.exe
+C:\Users\grimy\source\repos\test_ wf1\obj\Debug\test_ wf1.pdb
