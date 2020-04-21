@@ -12,6 +12,7 @@ namespace test__wf1
 {
 	public partial class Form1 : Form
 	{
+		/// <summary>Задаем начальные значения, создаем и занываем колонки.</summary>
 		public Form1()
 		{
 			//Выключаем неактивные комбобоксы
@@ -32,7 +33,7 @@ namespace test__wf1
 			DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
 			DataGridViewTextBoxColumn col7 = new DataGridViewTextBoxColumn();
 
-			//Нахываем колонки
+			//Называем колонки
 			col1.Name = "Имя";
 			col2.Name = "Фамилия";
 			col3.Name = "Пол";
@@ -42,13 +43,13 @@ namespace test__wf1
 			col7.Name = "Должность";
 
 			//Добавляем колонки в сетку данных
-			dataGridView.Columns.Add(col1);
-			dataGridView.Columns.Add(col2);
-			dataGridView.Columns.Add(col3);
-			dataGridView.Columns.Add(col4);
-			dataGridView.Columns.Add(col5);
-			dataGridView.Columns.Add(col6);
-			dataGridView.Columns.Add(col7);
+			_dataGridView.Columns.Add(col1);
+			_dataGridView.Columns.Add(col2);
+			_dataGridView.Columns.Add(col3);
+			_dataGridView.Columns.Add(col4);
+			_dataGridView.Columns.Add(col5);
+			_dataGridView.Columns.Add(col6);
+			_dataGridView.Columns.Add(col7);
 
 		}
 
@@ -82,6 +83,9 @@ namespace test__wf1
 
 		}
 
+		/// <summary>Создаем эвент изменения чекбокса.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _chkCompetence1_CheckedChanged(object sender, EventArgs e)
 		{
 			//Удаляем данные, если они уже внесены в комбобокс
@@ -102,6 +106,9 @@ namespace test__wf1
 			}
 		}
 
+		/// <summary>Создаем эвент изменения чекбокса.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _chkCompetence2_CheckedChanged(object sender, EventArgs e)
 		{
 			//Удаляем данные, если они уже внесены в комбобокс
@@ -122,6 +129,9 @@ namespace test__wf1
 			}
 		}
 
+		/// <summary>Создаем эвент изменения чекбокса.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _chkCompetence3_CheckedChanged(object sender, EventArgs e)
 		{
 			//Удаляем данные, если они уже внесены в комбобокс
@@ -147,81 +157,86 @@ namespace test__wf1
 
 		}
 
+		/// <summary>Создаем эвент нажатия на кнопку и его последствия.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void button1_Click(object sender, EventArgs e)
 		{
-
-			//Выводим месседжбокс с 2 варинтами ответа
-			DialogResult dr = MessageBox.Show("Сохранить данные?", "Сохранение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+			//Вводим переменную "result" для вывода результата меседжбокса. Выводим месседжбокс с 2 варинтами ответа
+			DialogResult result = MessageBox.Show("Сохранить данные?", "Сохранение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
 			//При ответе "ОК" начинаем выводить данные в сетку
-			if(dr == DialogResult.OK)
+			if(result == DialogResult.OK)
 			{
-				//Выводим имя и фамилию
-				int n = dataGridView.Rows.Add();
-				dataGridView[0, n].Value = _txtEnterName.Text;
-				dataGridView[1, n].Value = _txtEnterLastName.Text;
+				//Вводим переменную "countRows" для учета строк. Выводим имя и фамилию
+				int countRows = _dataGridView.Rows.Add();
+				_dataGridView[0, countRows].Value = _txtEnterName.Text;
+				_dataGridView[1, countRows].Value = _txtEnterLastName.Text;
 
 				//Проверяем какой пол выбран
 				if(_rdiGender1.Checked)
 				{
-					dataGridView[2, n].Value = _rdiGender1.Text;
+					_dataGridView[2, countRows].Value = _rdiGender1.Text;
 				}
 
 				else if(_rdiGender2.Checked)
 				{
-					dataGridView[2, n].Value = _rdiGender2.Text;
+					_dataGridView[2, countRows].Value = _rdiGender2.Text;
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 				if(_cmbEnterCompetenceLevel1.SelectedIndex == -1)
 				{
-					dataGridView[3, n].Value = " ";
+					_dataGridView[3, countRows].Value = " ";
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 				else if(_cmbEnterCompetenceLevel1.SelectedIndex >= 0)
 				{
-					dataGridView[3, n].Value = _cmbEnterCompetenceLevel1.SelectedItem.ToString();
+					_dataGridView[3, countRows].Value = _cmbEnterCompetenceLevel1.SelectedItem.ToString();
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 				if(_cmbEnterCompetenceLevel2.SelectedIndex == -1)
 				{
-					dataGridView[4, n].Value = " ";
+					_dataGridView[4, countRows].Value = " ";
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 				else if(_cmbEnterCompetenceLevel2.SelectedIndex >= 0)
 				{
-					dataGridView[4, n].Value = _cmbEnterCompetenceLevel2.SelectedItem.ToString();
+					_dataGridView[4, countRows].Value = _cmbEnterCompetenceLevel2.SelectedItem.ToString();
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 				if(_cmbEnterCompetenceLevel3.SelectedIndex == -1)
 				{
-					dataGridView[5, n].Value = " ";
+					_dataGridView[5, countRows].Value = " ";
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 				else if(_cmbEnterCompetenceLevel3.SelectedIndex >= 0)
 				{
-					dataGridView[5, n].Value = _cmbEnterCompetenceLevel3.SelectedItem.ToString();
+					_dataGridView[5, countRows].Value = _cmbEnterCompetenceLevel3.SelectedItem.ToString();
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 				if(_cmbEnterPosition.SelectedIndex == -1)
 				{
-					dataGridView[6, n].Value = " ";
+					_dataGridView[6, countRows].Value = " ";
 				}
 
 				//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 				else if(_cmbEnterPosition.SelectedIndex >= 0)
 				{
-					dataGridView[6, n].Value = _cmbEnterPosition.SelectedItem.ToString();
+					_dataGridView[6, countRows].Value = _cmbEnterPosition.SelectedItem.ToString();
 				}
 			}
 		}
 
+		/// <summary>Создаем эвент вноса данных в текстбокст. И задаем исключения.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _txtEnterName_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			//Вводим ограничение на ввод только букв в текстбоксе "Имя", также разрешаем использовать бэкспейс и делит
@@ -231,6 +246,9 @@ namespace test__wf1
 			}
 		}
 
+		/// <summary>Создаем эвент вноса данных в текстбокст. И задаем исключения.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _txtEnterLastName_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			//Вводим ограничение на ввод только букв в текстбоксе "Фамилия", также разрешаем использовать бэкспейс и делит

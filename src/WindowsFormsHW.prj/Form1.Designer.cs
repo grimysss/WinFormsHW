@@ -49,10 +49,10 @@
 			this._txtPosition = new System.Windows.Forms.Label();
 			this._cmbEnterPosition = new System.Windows.Forms.ComboBox();
 			this._grpMain = new System.Windows.Forms.GroupBox();
-			this.dataGridView = new System.Windows.Forms.DataGridView();
 			this._btnSave = new System.Windows.Forms.Button();
+			this._dataGridView = new System.Windows.Forms.DataGridView();
 			this._grpMain.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// _txtName
@@ -313,16 +313,6 @@
 			this._grpMain.Text = "Трудоустройство на работу";
 			this._grpMain.Enter += new System.EventHandler(this._grpMain_Enter);
 			// 
-			// dataGridView
-			// 
-			this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView.Location = new System.Drawing.Point(12, 332);
-			this.dataGridView.Name = "dataGridView";
-			this.dataGridView.RowHeadersVisible = false;
-			this.dataGridView.Size = new System.Drawing.Size(808, 257);
-			this.dataGridView.TabIndex = 13;
-			this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
 			// _btnSave
 			// 
 			this._btnSave.Location = new System.Drawing.Point(612, 275);
@@ -333,18 +323,28 @@
 			this._btnSave.UseVisualStyleBackColor = true;
 			this._btnSave.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// _dataGridView
+			// 
+			this._dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this._dataGridView.Location = new System.Drawing.Point(12, 332);
+			this._dataGridView.Name = "_dataGridView";
+			this._dataGridView.RowHeadersVisible = false;
+			this._dataGridView.Size = new System.Drawing.Size(808, 257);
+			this._dataGridView.TabIndex = 13;
+			this._dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(832, 601);
-			this.Controls.Add(this.dataGridView);
+			this.Controls.Add(this._dataGridView);
 			this.Controls.Add(this._grpMain);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this._grpMain.ResumeLayout(false);
 			this._grpMain.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -371,7 +371,7 @@
 		private System.Windows.Forms.ComboBox _cmbEnterPosition;
 		private System.Windows.Forms.Label _txtPosition;
 		private System.Windows.Forms.GroupBox _grpMain;
-		private System.Windows.Forms.DataGridView dataGridView;
+		private System.Windows.Forms.DataGridView _dataGridView;
 		private System.Windows.Forms.Button _btnSave;
 	}
 }

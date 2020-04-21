@@ -8,3 +8,13 @@ D:\repository\WinFormsHW\WindowsFormsHW\src\WindowsFormsHW.prj\obj\Debug\WinForm
 D:\repository\WinFormsHW\WindowsFormsHW\src\WindowsFormsHW.prj\obj\Debug\WinFormsHW.csproj.CoreCompileInputs.cache
 D:\repository\WinFormsHW\WindowsFormsHW\src\WindowsFormsHW.prj\obj\Debug\test_ wf1.exe
 D:\repository\WinFormsHW\WindowsFormsHW\src\WindowsFormsHW.prj\obj\Debug\test_ wf1.pdb
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\bin\Debug\test_ wf1.exe.config
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\bin\Debug\test_ wf1.exe
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\bin\Debug\test_ wf1.pdb
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\WinFormsHW.csprojAssemblyReference.cache
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\test__wf1.Form1.resources
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\test__wf1.Properties.Resources.resources
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\WinFormsHW.csproj.GenerateResource.cache
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\WinFormsHW.csproj.CoreCompileInputs.cache
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\test_ wf1.exe
+D:\repository\WinFormsHW\WinFormsHW\src\WindowsFormsHW.prj\obj\Debug\test_ wf1.pdb

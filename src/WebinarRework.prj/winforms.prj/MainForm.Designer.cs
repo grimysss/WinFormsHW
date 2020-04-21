@@ -47,13 +47,13 @@
 			this._txtEnterLastName = new System.Windows.Forms.TextBox();
 			this._txtEnterName = new System.Windows.Forms.TextBox();
 			this._txtName = new System.Windows.Forms.Label();
+			this._txtLastName1 = new System.Windows.Forms.Label();
 			this._txtLastName = new System.Windows.Forms.Label();
 			this._openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this._folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-			this.dataGridView = new System.Windows.Forms.DataGridView();
-			this._txtLastName1 = new System.Windows.Forms.Label();
+			this._dataGridView = new System.Windows.Forms.DataGridView();
 			this._pnlMain.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// _pnlMain
@@ -277,6 +277,17 @@
 			this._txtName.Size = new System.Drawing.Size(0, 20);
 			this._txtName.TabIndex = 0;
 			// 
+			// _txtLastName1
+			// 
+			this._txtLastName1.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this._txtLastName1.AutoSize = true;
+			this._txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this._txtLastName1.Location = new System.Drawing.Point(19, 12);
+			this._txtLastName1.Name = "_txtLastName1";
+			this._txtLastName1.Size = new System.Drawing.Size(40, 20);
+			this._txtLastName1.TabIndex = 2;
+			this._txtLastName1.Text = "Имя";
+			// 
 			// _txtLastName
 			// 
 			this._txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -292,37 +303,26 @@
 			// 
 			this._openFileDialog.FileName = "openFileDialog1";
 			// 
-			// dataGridView
+			// _dataGridView
 			// 
-			this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView.Location = new System.Drawing.Point(12, 323);
-			this.dataGridView.Name = "dataGridView";
-			this.dataGridView.Size = new System.Drawing.Size(749, 150);
-			this.dataGridView.TabIndex = 1;
-			// 
-			// _txtLastName1
-			// 
-			this._txtLastName1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this._txtLastName1.AutoSize = true;
-			this._txtLastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this._txtLastName1.Location = new System.Drawing.Point(19, 12);
-			this._txtLastName1.Name = "_txtLastName1";
-			this._txtLastName1.Size = new System.Drawing.Size(40, 20);
-			this._txtLastName1.TabIndex = 2;
-			this._txtLastName1.Text = "Имя";
+			this._dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this._dataGridView.Location = new System.Drawing.Point(12, 323);
+			this._dataGridView.Name = "_dataGridView";
+			this._dataGridView.Size = new System.Drawing.Size(749, 150);
+			this._dataGridView.TabIndex = 1;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(773, 530);
-			this.Controls.Add(this.dataGridView);
+			this.Controls.Add(this._dataGridView);
 			this.Controls.Add(this._pnlMain);
 			this.Name = "MainForm";
 			this.Text = "MainForm";
 			this._pnlMain.ResumeLayout(false);
 			this._pnlMain.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -349,7 +349,7 @@
 		private System.Windows.Forms.TextBox _txtFile;
 		private System.Windows.Forms.Button _btnOpenDirectory;
 		private System.Windows.Forms.FolderBrowserDialog _folderBrowserDialog;
-		private System.Windows.Forms.DataGridView dataGridView;
+		private System.Windows.Forms.DataGridView _dataGridView;
 		private System.Windows.Forms.Button _btnSave;
 		private System.Windows.Forms.Label _txtLastName1;
 	}

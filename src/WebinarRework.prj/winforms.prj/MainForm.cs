@@ -57,12 +57,12 @@ namespace WinForms
 			col5.Name = "История";
 			col6.Name = "Химия";
 
-			dataGridView.Columns.Add(col1);
-			dataGridView.Columns.Add(col2);
-			dataGridView.Columns.Add(col3);
-			dataGridView.Columns.Add(col4);
-			dataGridView.Columns.Add(col5);
-			dataGridView.Columns.Add(col6);
+			_dataGridView.Columns.Add(col1);
+			_dataGridView.Columns.Add(col2);
+			_dataGridView.Columns.Add(col3);
+			_dataGridView.Columns.Add(col4);
+			_dataGridView.Columns.Add(col5);
+			_dataGridView.Columns.Add(col6);
 
 		}
 
@@ -137,66 +137,86 @@ namespace WinForms
 				.Where(s => s.EndsWith("*.png") || s.EndsWith("*.jpg"));
 		}
 
+		/// <summary>Создаем эвент нажатия на кнопку и его последствия.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _btnSave_Click(object sender, EventArgs e)
 		{
-			int n = dataGridView.Rows.Add();
-			dataGridView[0,n].Value = _txtEnterName.Text;
-			dataGridView[1, n].Value = _txtEnterLastName.Text;
+			//Вводим переменную "countRows" для учета строк. Выводим имя и фамилию
+			int countRows = _dataGridView.Rows.Add();
+			_dataGridView[0,countRows].Value = _txtEnterName.Text;
+			_dataGridView[1, countRows].Value = _txtEnterLastName.Text;
 
+			//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 			if(_cmbEnterMath.SelectedIndex == -1)
 			{
-				dataGridView[2, n].Value = " ";
+				_dataGridView[2, countRows].Value = " ";
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 			else if(_cmbEnterMath.SelectedIndex >= 0)
 			{
-				dataGridView[2, n].Value = _cmbEnterMath.SelectedItem.ToString();
+				_dataGridView[2, countRows].Value = _cmbEnterMath.SelectedItem.ToString();
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 			if(_cmbEnterRus.SelectedIndex == -1)
 			{
-				dataGridView[3, n].Value = " ";
+				_dataGridView[3, countRows].Value = " ";
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 			else if(_cmbEnterRus.SelectedIndex >= 0)
 			{
-				dataGridView[3, n].Value = _cmbEnterRus.SelectedItem.ToString();
+				_dataGridView[3, countRows].Value = _cmbEnterRus.SelectedItem.ToString();
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 			if(_cmbEnterHistory.SelectedIndex == -1)
 			{
-				dataGridView[4, n].Value = " ";
+				_dataGridView[4, countRows].Value = " ";
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 			else if(_cmbEnterHistory.SelectedIndex >= 0)
 			{
-				dataGridView[4, n].Value = _cmbEnterHistory.SelectedItem.ToString();
+				_dataGridView[4, countRows].Value = _cmbEnterHistory.SelectedItem.ToString();
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если нет, выводим пустую сетку
 			if(_cmbEnterH20.SelectedIndex == -1)
 			{
-				dataGridView[5, n].Value = " ";
+				_dataGridView[5, countRows].Value = " ";
 			}
 
+			//Проверяем заполненные ли данные в комбобоксе, если данные есть, то выводим из содержание в сетку
 			else if(_cmbEnterH20.SelectedIndex >= 0)
 			{
-				dataGridView[5, n].Value = _cmbEnterH20.SelectedItem.ToString();
+				_dataGridView[5, countRows].Value = _cmbEnterH20.SelectedItem.ToString();
 			}
 
-
+			//Выводим месседжбокс
 			MessageBox.Show("Данные добавлены", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 		}
 
+		/// <summary>Создаем эвент вноса данных в текстбокст. И задаем исключения.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _txtEnterName_KeyPress(object sender, KeyPressEventArgs e)
 		{
+			//Вводим ограничение на ввод только букв в текстбоксе "Имя", также разрешаем использовать бэкспейс и делит
 			if(!Char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
 			{
 				e.Handled = true;
 			}
 		}
 
+		/// <summary>Создаем эвент вноса данных в текстбокст. И задаем исключения.</summary>
+		/// <param name="sender">Источник события.</param>
+		/// <param name="e">Объект события.</param>
 		private void _txtEnterLastName_KeyPress(object sender, KeyPressEventArgs e)
 		{
+			//Вводим ограничение на ввод только букв в текстбоксе "Фамилия", также разрешаем использовать бэкспейс и делит
 			if(!Char.IsLetter(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 127)
 			{
 				e.Handled = true;
